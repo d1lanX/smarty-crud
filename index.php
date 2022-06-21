@@ -8,5 +8,4 @@
     $smarty->assign('mensaje', 'Bienvenidos!');
     $smarty->display('index.tpl');
 
-
 ?>

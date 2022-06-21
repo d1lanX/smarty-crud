@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>Pagina<title>
+        <title>Pagina</title>
     </head>
     <body>
     {$mensaje}
