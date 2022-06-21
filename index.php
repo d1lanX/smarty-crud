@@ -5,7 +5,7 @@
     $smarty->config_dir = './config';
     $smarty->cache_dir = './cache';
     $smarty->compile_dir = './templates_c';
-    $smarty->assign('mensaje', 'Bienvenidos!');
+    $smarty->assign('mensaje', 'Maldecidos!');
+    $smarty->assign('titulo', 'Vendedores 1.0');
     $smarty->display('index.tpl');
-
 ?>
