@@ -5,6 +5,6 @@
     $smarty->config_dir = './config';
     $smarty->cache_dir = './cache';
     $smarty->compile_dir = './templates_c';
-    $smarty->assign('titulo', 'Vendedores 1.0');
+    $smarty->assign('titulo', 'App');
     $smarty->display('index.tpl');
 ?>
