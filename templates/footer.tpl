@@ -1,15 +1,8 @@
 {* inicio footer *}
-<div class="container">
-    <div class="card">
-    <div class="card-header">
-        Frase
-    </div>
-    <div class="card-body">
-        <blockquote class="blockquote mb-0">
-        <p>La forma de empezar es dejar de hablar y empezar a hacer.</p>
-        <footer class="blockquote-footer">Walt-Disney</footer>
-        </blockquote>
-    </div>
-    </div>
-</div>
+<footer class="text-center text-white fixed-bottom" style="background-color: black;">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022
+    {* <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> *}
+  </div>
+</footer>
 {* fin html  *}
