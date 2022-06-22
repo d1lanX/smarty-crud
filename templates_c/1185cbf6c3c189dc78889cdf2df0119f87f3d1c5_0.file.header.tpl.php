@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-22 22:40:21
+/* Smarty version 3.1.38, created on 2022-06-22 22:55:37
   from 'D:\Xampp\htdocs\smarty-crud\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62b37e35c56593_23288641',
+  'unifunc' => 'content_62b381c9a1ff29_01353136',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1185cbf6c3c189dc78889cdf2df0119f87f3d1c5' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\header.tpl',
-      1 => 1655930419,
+      1 => 1655931335,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62b37e35c56593_23288641 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62b381c9a1ff29_01353136 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
   <head>
     <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
@@ -30,7 +30,7 @@ function content_62b37e35c56593_23288641 (Smarty_Internal_Template $_smarty_tpl)
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 
-    <nav class="navbar bg-dark fixed-top mb-5">
+    <nav class="navbar bg-dark fixed-top">
       <div class="container-fluid">
             <a class="navbar-brand text-light" href="">App</a>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

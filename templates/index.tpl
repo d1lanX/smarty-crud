@@ -3,11 +3,13 @@
     
     <div class="container">
 
+        <br>
         <div class="col-12 mt-5">
             <h1 class="display-6">Últimas ventas</h1>
         </div>
     
         <table class="table table-striped mt-3">
+        {* TODO: que los nombres de las columnas se inserten como variables tpl *}
             <tr>
                 <th>#</th>
                 <th>Nombre</th>
@@ -24,5 +26,6 @@
         </table>    
     
     </div>
+    
 </body>
 {include file="footer.tpl"}
