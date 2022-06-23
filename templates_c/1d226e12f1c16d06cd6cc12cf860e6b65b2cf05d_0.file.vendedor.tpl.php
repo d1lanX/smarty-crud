@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-23 17:37:52
+/* Smarty version 3.1.38, created on 2022-06-23 23:01:35
   from 'D:\Xampp\htdocs\smarty-crud\templates\vendedor.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62b488d030e995_35170685',
+  'unifunc' => 'content_62b4d4af91f060_91490449',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d226e12f1c16d06cd6cc12cf860e6b65b2cf05d' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\vendedor.tpl',
-      1 => 1655998665,
+      1 => 1656017818,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_62b488d030e995_35170685 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62b4d4af91f060_91490449 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo $_smarty_tpl->tpl_vars['titulo']->value;
 $_prefixVariable1 = ob_get_clean();
@@ -93,13 +93,46 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             </div>
         </form>
 
-
         <?php if ($_smarty_tpl->tpl_vars['seGuardo']->value == true) {?>
         <div class="alert alert-success" role="alert">
         El registro fue guardado exitosamente!
         </div>
         <?php }?>
 
+    </div>
+
+    <div class="container">
+        
+        <table class="table table-striped mt-5">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Empresa</th>
+            <th>Dirección</th>
+            <th>Opción</th>
+        </tr>
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, "tabla", 'campo');
+$_smarty_tpl->tpl_vars['campo']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['campo']->value) {
+$_smarty_tpl->tpl_vars['campo']->do_else = false;
+?>
+        <tr>
+            <td><?php echo $_smarty_tpl->tpl_vars['campo']->value['id_cli'];?>
+</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Teléfono</td>
+            <td>Dirección</td>
+            <td>Empresa</td>
+            <td></td>
+        </tr>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        </table>
     </div>
     
 </body>

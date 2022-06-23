@@ -64,13 +64,38 @@
             </div>
         </form>
 
-
         {if $seGuardo == true}
         <div class="alert alert-success" role="alert">
         El registro fue guardado exitosamente!
         </div>
         {/if}
 
+    </div>
+
+    <div class="container">
+        
+        <table class="table table-striped mt-5">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Empresa</th>
+            <th>Dirección</th>
+            <th>Opción</th>
+        </tr>
+        {section name=i loop=$vendedor}
+        <tr>
+            <td>ID</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Teléfono</td>
+            <td>Dirección</td>
+            <td>Empresa</td>
+            <td></td>
+        </tr>
+        {/foreach}
+        </table>
     </div>
     
 </body>
