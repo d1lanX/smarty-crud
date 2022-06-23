@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-22 22:55:37
+/* Smarty version 3.1.38, created on 2022-06-22 23:22:51
   from 'D:\Xampp\htdocs\smarty-crud\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62b381c9a1ff29_01353136',
+  'unifunc' => 'content_62b3882b131337_71398774',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1185cbf6c3c189dc78889cdf2df0119f87f3d1c5' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\header.tpl',
-      1 => 1655931335,
+      1 => 1655932967,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62b381c9a1ff29_01353136 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62b3882b131337_71398774 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
   <head>
-    <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
-</title>
+    <title>App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"><?php echo '</script'; ?>

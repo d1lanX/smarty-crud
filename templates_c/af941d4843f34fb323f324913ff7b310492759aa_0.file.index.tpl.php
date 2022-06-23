@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-22 22:57:36
+/* Smarty version 3.1.38, created on 2022-06-23 00:25:41
   from 'D:\Xampp\htdocs\smarty-crud\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62b38240a3ea72_48822136',
+  'unifunc' => 'content_62b396e55fec82_33059278',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'af941d4843f34fb323f324913ff7b310492759aa' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\index.tpl',
-      1 => 1655931455,
+      1 => 1655936739,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_62b38240a3ea72_48822136 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62b396e55fec82_33059278 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo $_smarty_tpl->tpl_vars['titulo']->value;
 $_prefixVariable1 = ob_get_clean();
@@ -39,16 +39,18 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     
         <table class="table table-striped mt-3">
                     <tr>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Telefono</th>
+                <th># Venta</th>
+                <th>Articulo</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Fecha</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>Juan</td>
-                <td>Gonzalez</td>
-                <td>2378920</td>
+                <td>1121</td>
+                <td>Arroz</td>
+                <td>25</td>
+                <td>$35.000</td>
+                <td>24/06/2022 5:21:20PM</td>
             </tr>
 
         </table>    

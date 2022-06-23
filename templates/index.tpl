@@ -11,16 +11,18 @@
         <table class="table table-striped mt-3">
         {* TODO: que los nombres de las columnas se inserten como variables tpl *}
             <tr>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Telefono</th>
+                <th># Venta</th>
+                <th>Articulo</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Fecha</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>Juan</td>
-                <td>Gonzalez</td>
-                <td>2378920</td>
+                <td>1121</td>
+                <td>Arroz</td>
+                <td>25</td>
+                <td>$35.000</td>
+                <td>24/06/2022 5:21:20PM</td>
             </tr>
 
         </table>    
