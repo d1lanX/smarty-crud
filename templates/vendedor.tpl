@@ -84,7 +84,7 @@
             <th>Dirección</th>
             <th>Opción</th>
         </tr>
-        {section name=i loop=$vendedor}
+        {* {section name=i loop=$vendedor} *}
         <tr>
             <td>ID</td>
             <td>Nombre</td>
@@ -94,7 +94,7 @@
             <td>Empresa</td>
             <td></td>
         </tr>
-        {/foreach}
+        {* {/foreach} *}
         </table>
     </div>
     

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-23 23:01:35
+/* Smarty version 3.1.38, created on 2022-06-24 00:35:47
   from 'D:\Xampp\htdocs\smarty-crud\templates\vendedor.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62b4d4af91f060_91490449',
+  'unifunc' => 'content_62b4eac3521b20_26863356',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d226e12f1c16d06cd6cc12cf860e6b65b2cf05d' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\vendedor.tpl',
-      1 => 1656017818,
+      1 => 1656023738,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_62b4d4af91f060_91490449 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62b4eac3521b20_26863356 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo $_smarty_tpl->tpl_vars['titulo']->value;
 $_prefixVariable1 = ob_get_clean();
@@ -113,15 +113,8 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             <th>Dirección</th>
             <th>Opción</th>
         </tr>
-        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, "tabla", 'campo');
-$_smarty_tpl->tpl_vars['campo']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['campo']->value) {
-$_smarty_tpl->tpl_vars['campo']->do_else = false;
-?>
-        <tr>
-            <td><?php echo $_smarty_tpl->tpl_vars['campo']->value['id_cli'];?>
-</td>
+                <tr>
+            <td>ID</td>
             <td>Nombre</td>
             <td>Apellido</td>
             <td>Teléfono</td>
@@ -129,10 +122,7 @@ $_smarty_tpl->tpl_vars['campo']->do_else = false;
             <td>Empresa</td>
             <td></td>
         </tr>
-        <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        </table>
+                </table>
     </div>
     
 </body>
