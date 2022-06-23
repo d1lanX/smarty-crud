@@ -6,7 +6,7 @@
     $smarty->config_dir = '../config';
     $smarty->cache_dir = '../cache';
     $smarty->compile_dir = '../templates_c';
-    $smarty->assign('seGuardo', false);
+    $smarty->assign('seGuardo', true);
     $smarty->display('vendedor.tpl');
 
 // ------------------------------------------------------- \\
@@ -52,6 +52,21 @@
         }
 
         return (int)$numero;
+    }
+
+    function consultaSelect($nombreTabla, $camposConsult, $valoresConsult){
+        global $connect;
+        $condicion = "WHERE";
+
+        for($index = 0; $index < $camposConsult; $index++){
+            $condicion = ($index == (count($camposConsult) - 1)) ? $condicion."`". $camposConsult[$index]."` = '"
+                .$valoresConsult[$index]."'" : $condicion."`".$camposConsult[$index]."`= '".$valoresConsult[$index].
+                "' AND ";
+
+        }
+
+        $sql = "";
+
     }
 
 
