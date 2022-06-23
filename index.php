@@ -11,7 +11,7 @@
     // ------------------------------------------------------- \\
 
     $sql = "SELECT * FROM detalle_ventas";
-    $query-> $connect->prepare($sql);
+    $query = $connect->prepare($sql);
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_OBJ);
 ?>

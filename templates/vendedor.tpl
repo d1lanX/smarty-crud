@@ -65,7 +65,7 @@
         </form>
 
 
-        {if $guardado=='true'}
+        {if $seGuardo == true}
         <div class="alert alert-success" role="alert">
         El registro fue guardado exitosamente!
         </div>

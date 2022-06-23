@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-23 03:33:17
+/* Smarty version 3.1.38, created on 2022-06-23 17:37:52
   from 'D:\Xampp\htdocs\smarty-crud\templates\vendedor.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62b3c2dd16eec9_39686467',
+  'unifunc' => 'content_62b488d030e995_35170685',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d226e12f1c16d06cd6cc12cf860e6b65b2cf05d' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\vendedor.tpl',
-      1 => 1655937722,
+      1 => 1655998665,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_62b3c2dd16eec9_39686467 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62b488d030e995_35170685 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo $_smarty_tpl->tpl_vars['titulo']->value;
 $_prefixVariable1 = ob_get_clean();
@@ -94,7 +94,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         </form>
 
 
-        <?php if ($_smarty_tpl->tpl_vars['guardado']->value == 'true') {?>
+        <?php if ($_smarty_tpl->tpl_vars['seGuardo']->value == true) {?>
         <div class="alert alert-success" role="alert">
         El registro fue guardado exitosamente!
         </div>

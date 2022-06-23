@@ -6,7 +6,7 @@
     $smarty->config_dir = '../config';
     $smarty->cache_dir = '../cache';
     $smarty->compile_dir = '../templates_c';
-    $smarty->assign('guardado', 'false');
+    $smarty->assign('seGuardo', false);
     $smarty->display('vendedor.tpl');
 
 // ------------------------------------------------------- \\
@@ -19,7 +19,8 @@
         $direccion = $_POST['direccion'];
         $empresa = $_POST['empresa'];
 
-        $id = 1; // <----HAY QUE PONER AUTOINCREMENT EN LA BASE DE DATOS PARA ESTE ID    
+        $id = generarNumeroRandom(); // <----HAY QUE PONER AUTOINCREMENT EN LA BASE DE DATOS PARA ESTE ID    
+        //$id = 1; // <----HAY QUE PONER AUTOINCREMENT EN LA BASE DE DATOS PARA ESTE ID    
 
         $sql = "INSERT INTO cliente (id_cli, nom_cli, apell_cli, empresa_cli, direcc_cli,
         telef_cli) VALUES (:id_cli, :nom_cli, :apell_cli, :empresa_cli, :direcc_cli, :telef_cli)";
@@ -34,8 +35,24 @@
         $sql->bindParam(':telef_cli', $telefono, PDO::PARAM_STR, 36);
 
         $sql->execute();
-        $lastInsertedId = $connect->lastInsertId();
-
-        if($lastInsertedId > 0) $smarty->assign('guardado', 'true');
+        $result = $connect->lastInsertId();
+        
+        if(!empty($result)) {
+            $smarty->assign('seGuardo', true);
+            header("Location: ./vendedor.php");
+        }
     }
+
+
+    function generarNumeroRandom(){
+        $numeros = "0123456789";
+        $numero = "";
+        for($i = 0; $i < 7; $i++){
+            $numero.=$numeros[rand(0, 8)];
+        }
+
+        return (int)$numero;
+    }
+
+
 ?>
