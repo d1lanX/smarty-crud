@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-28 05:13:26
+/* Smarty version 3.1.38, created on 2022-06-28 05:37:22
   from 'D:\Xampp\htdocs\smarty-crud\templates\vendedor.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62ba71d6a2b822_13417542',
+  'unifunc' => 'content_62ba77721163b2_80190524',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d226e12f1c16d06cd6cc12cf860e6b65b2cf05d' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\vendedor.tpl',
-      1 => 1656386004,
+      1 => 1656386106,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_62ba71d6a2b822_13417542 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62ba77721163b2_80190524 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo $_smarty_tpl->tpl_vars['titulo']->value;
 $_prefixVariable1 = ob_get_clean();
@@ -138,8 +138,7 @@ $_smarty_tpl->tpl_vars['result']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </table>
-        <br><br><br><br><br>
-
+         <br><br><br><br><br> 
     </div>
     
 </body>
