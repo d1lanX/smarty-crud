@@ -62,8 +62,29 @@
 
         }
 
-        function consultarDeterminadosCamnpos($nomnbreTabla, $campoUnico){
+        function consultarDeterminadosCamnpos($nombreTabla, $datosExtraccion, $camposConsulta, $valoresConsulta){
+            global $connect;
+            $condicion = "WHERE ";
+            $datosEx = "";
 
+            for($index = 0; $index < count($camposConsulta); $index++){
+                $condicion = ($index == (count($camposConsulta) - 1)) ? $condicion."`".$camposConsulta[$index]
+                ."` = '".$valoresConsulta[$index]."'" : $condicion."`".$camposConsulta[$index]."` = '"
+                .$valoresConsulta[$index]."'"."AND";
+
+            }
+
+            for($indexExtraccion = 0; $indexExtraccion < count($datosExtraccion); $indexExtraccion++){
+                $datosEx = ($indexExtraccion == (count($datosExtraccion) - 1)) ? $datosEx.
+                $datosExtraccion[$indexExtraccion]: $datosEx.$datosExtraccion[$indexExtraccion].",";
+
+            }
+
+            $consulta = "SELECT $datosEx FROM $nombreTabla $condicion;";
+
+            $query = $connect->prepare($consulta);
+
+            return $query;
 
         }
 

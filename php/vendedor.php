@@ -35,23 +35,6 @@
 
         $sql = $consulJ->insertar(TABLADATABASE, CAMPOSCLIENTES, VALORESCLIENTES);
 
-
-
-    //     $id = rand(1, 2500); // <----HAY QUE PONER AUTOINCREMENT EN LA BASE DE DATOS PARA ESTE ID    
-    //     //$id = 1; // <----HAY QUE PONER AUTOINCREMENT EN LA BASE DE DATOS PARA ESTE ID    
-
-    //     $sql = "INSERT INTO cliente (id_cli, nom_cli, apell_cli, empresa_cli, direcc_cli,
-    //     telef_cli) VALUES (:id_cli, :nom_cli, :apell_cli, :empresa_cli, :direcc_cli, :elef_clit)";
-
-    //     $sql = $connect->prepare($sql);
-
-    //     $sql->bindParam(':id_cli', $id, PDO::PARAM_INT, 10);
-    //     $sql->bindParam(':nom_cli', $nombre, PDO::PARAM_STR, 36);
-    //     $sql->bindParam(':apell_cli', $apellido, PDO::PARAM_STR, 36);
-    //     $sql->bindParam(':empresa_cli', $empresa, PDO::PARAM_STR, 50);
-    //     $sql->bindParam(':direcc_cli', $direccion, PDO::PARAM_STR, 80);
-    //     $sql->bindParam(':telef_cli', $telefono, PDO::PARAM_STR, 36);
-
         if($sql->execute()) {
             $smarty->assign('seGuardo', true);
         }
