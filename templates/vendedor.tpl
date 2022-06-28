@@ -94,7 +94,6 @@
             <td>Empresa</td>
             <td></td>
         </tr>
-        {* {/foreach} *}
         </table>
     </div>
     
