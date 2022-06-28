@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2022-06-24 00:35:47
+/* Smarty version 3.1.38, created on 2022-06-28 03:23:18
   from 'D:\Xampp\htdocs\smarty-crud\templates\vendedor.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_62b4eac3521b20_26863356',
+  'unifunc' => 'content_62ba5806b4d143_70443398',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d226e12f1c16d06cd6cc12cf860e6b65b2cf05d' => 
     array (
       0 => 'D:\\Xampp\\htdocs\\smarty-crud\\templates\\vendedor.tpl',
-      1 => 1656023738,
+      1 => 1656379389,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_62b4eac3521b20_26863356 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62ba5806b4d143_70443398 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo $_smarty_tpl->tpl_vars['titulo']->value;
 $_prefixVariable1 = ob_get_clean();
@@ -113,16 +113,36 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             <th>Dirección</th>
             <th>Opción</th>
         </tr>
-                <tr>
-            <td>ID</td>
-            <td>Nombre</td>
-            <td>Apellido</td>
-            <td>Teléfono</td>
-            <td>Dirección</td>
-            <td>Empresa</td>
-            <td></td>
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['resultados']->value, 'result');
+$_smarty_tpl->tpl_vars['result']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['result']->value) {
+$_smarty_tpl->tpl_vars['result']->do_else = false;
+?>
+            
+        <tr>
+            <td><?php echo $_smarty_tpl->tpl_vars['result']->value->id_cli;?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['result']->value->nom_cli;?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['result']->value->apell_cli;?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['result']->value->empresa_cli;?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['result']->value->direcc_cli;?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['result']->value->telef_cli;?>
+</td>
+            
+            <td>
+            <a href="../php/vendedor.php?idPC=<?php echo $_smarty_tpl->tpl_vars['result']->value->id_cli;?>
+" class="btn btn-outline-warning btn-block"><i class="far fa-edit"></i></a>
+            </td>
         </tr>
-                </table>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        </table>
     </div>
     
 </body>

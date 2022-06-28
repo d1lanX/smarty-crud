@@ -62,7 +62,17 @@
 
         }
 
+        function consultarTodosRegistros($tabla){
+            global $connect;
+            $consulta = "SELECT * FROM $tabla";
+            $query = $connect->prepare($consulta);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            return $results;
+        }
+
         function consultarDeterminadosCamnpos($nomnbreTabla, $campoUnico){
+
 
 
         }

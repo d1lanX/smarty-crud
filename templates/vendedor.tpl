@@ -84,17 +84,21 @@
             <th>Dirección</th>
             <th>Opción</th>
         </tr>
-        {* {section name=i loop=$vendedor} *}
+        {foreach $resultados as $result}
+            
         <tr>
-            <td>ID</td>
-            <td>Nombre</td>
-            <td>Apellido</td>
-            <td>Teléfono</td>
-            <td>Dirección</td>
-            <td>Empresa</td>
-            <td></td>
+            <td>{$result->id_cli}</td>
+            <td>{$result->nom_cli}</td>
+            <td>{$result->apell_cli}</td>
+            <td>{$result->empresa_cli}</td>
+            <td>{$result->direcc_cli}</td>
+            <td>{$result->telef_cli}</td>
+            
+            <td>
+            <a href="../php/vendedor.php?idPC={$result->id_cli}" class="btn btn-outline-warning btn-block"><i class="far fa-edit"></i></a>
+            </td>
         </tr>
-        {* {/foreach} *}
+        {/foreach}
         </table>
     </div>
     
