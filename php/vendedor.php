@@ -13,11 +13,21 @@
     $smarty->compile_dir = '../templates_c';
     $smarty->assign('seGuardo', false);
 
+<<<<<<< HEAD
     $tabla = "cliente";
     $consulta = $consulJ->consultarTodosRegistros($tabla);
     
     $smarty->assign('resultados', $consulta);
+=======
+>>>>>>> feature/julian
 
+    // $sql = "SELECT * FROM cliente";
+    // $query = $connect->prepare($sql);
+    // $query->execute();
+    // $results = $query -> fetchAll(PDO::FETCH_OBJ);
+    // if($query -> rowCount() > 0) { 
+        
+    // }
 
     if(isset($_POST['guardar'])){
         $nombre = filter_input(INPUT_POST, 'nombre');
@@ -25,6 +35,8 @@
         $telefono = filter_input(INPUT_POST, 'telefono');
         $direccion = filter_input(INPUT_POST, 'direccion');
         $empresa = filter_input(INPUT_POST, 'empresa');
+
+        
 
         define("TABLADATABASE", "cliente");
         define("CAMPOSCLIENTES", array("nom_cli", "apell_cli", "empresa_cli", "direcc_cli", "telef_cli"));
