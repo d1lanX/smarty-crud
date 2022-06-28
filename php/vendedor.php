@@ -12,6 +12,7 @@
     $smarty->cache_dir = '../cache';
     $smarty->compile_dir = '../templates_c';
 
+
     // ---------------------------------------------------------------- \\
     $tabla = "cliente";
     $consulta = $consulJ->consultarTodosRegistros($tabla);
@@ -21,7 +22,8 @@
     // ---------------------------------------------------------------- \\
 
 
-    if(isset($_POST['guardar'])){
+    if(isset($_POST['guardar']))
+    {
         $nombre = filter_input(INPUT_POST, 'nombre');
         $apellido = filter_input(INPUT_POST, 'apellido');
         $telefono = filter_input(INPUT_POST, 'telefono');
@@ -37,7 +39,6 @@
         if($sql->execute()) {
             header("Location: vendedor.php");
         }
-        
     } 
 
     $smarty->display('vendedor.tpl');
