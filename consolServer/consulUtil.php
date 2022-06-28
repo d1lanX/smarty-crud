@@ -92,6 +92,7 @@
             $consulta = "SELECT $datosEx FROM $nombreTabla $condicion;";
 
             $query = $connect->prepare($consulta);
+            $query
 
             return $query;
 
