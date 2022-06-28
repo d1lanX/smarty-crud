@@ -64,11 +64,11 @@
             </div>
         </form>
 
-        {if $seGuardo == true}
+        {* {if $seGuardo == true}
         <div class="alert alert-success" role="alert">
         El registro fue guardado exitosamente!
         </div>
-        {/if}
+        {/if} *}
 
     </div>
 
@@ -93,13 +93,15 @@
             <td>{$result->empresa_cli}</td>
             <td>{$result->direcc_cli}</td>
             <td>{$result->telef_cli}</td>
-            
+
             <td>
-            <a href="../php/vendedor.php?idPC={$result->id_cli}" class="btn btn-outline-warning btn-block"><i class="far fa-edit"></i></a>
+            <a href="../php/vendedor.php?id={$result->id_cli}" class="btn btn-outline-warning btn-block" name="editar" type="submit"><i class="far fa-edit"></i></a>
             </td>
         </tr>
         {/foreach}
         </table>
+         <br><br><br><br><br> {* <---- por lo pronto *}
+
     </div>
     
 </body>

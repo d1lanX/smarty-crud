@@ -1,8 +1,8 @@
 <?php 
     require('Smarty.class.php');
     require('../db.php');
+    require('../consolServer/consulUtil.php');
 
-    include_once('../consolServer/consulUtil.php');
 
     $smarty = new Smarty();
     $consulJ = new consolUtil();
@@ -11,12 +11,14 @@
     $smarty->config_dir = '../config';
     $smarty->cache_dir = '../cache';
     $smarty->compile_dir = '../templates_c';
-    $smarty->assign('seGuardo', false);
 
+    // ---------------------------------------------------------------- \\
     $tabla = "cliente";
     $consulta = $consulJ->consultarTodosRegistros($tabla);
     
-    $smarty->assign('resultados', $consulta);
+    /* Se asigna el valor de la consulta en variable smarty $resultados*/
+    $smarty->assign('resultados', $consulta); 
+    // ---------------------------------------------------------------- \\
 
 
     if(isset($_POST['guardar'])){
@@ -33,13 +35,10 @@
         $sql = $consulJ->insertar(TABLADATABASE, CAMPOSCLIENTES, VALORESCLIENTES);
 
         if($sql->execute()) {
-            $smarty->assign('seGuardo', true);
-            sleep(2);
             header("Location: vendedor.php");
         }
-
         
-    }
+    } 
 
     $smarty->display('vendedor.tpl');
 

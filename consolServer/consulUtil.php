@@ -57,8 +57,13 @@
 
             $consulta = "SELECT * FROM $nombreTabla $condicion";
             $query = $connect->prepare($consulta);
+            
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            echo "Resultados: ".$results;
+            return $results;
 
-            return $query;
+            // return $query;
 
         }
 
